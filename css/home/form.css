@@ -1,0 +1,66 @@
+.form-receita-despesa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.form-receita,
+.form-despesa {
+    background-color: #000000;
+    padding: 1rem;
+    color: #c7c7c7;
+    border-radius: 5px;
+}
+
+.form-receita h1,
+.form-despesa h1 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.form-receita label,
+.form-despesa label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-receita select,
+.form-despesa select {
+    margin-bottom: 30px;
+}
+
+.form-receita input,
+.form-despesa input {
+    margin-bottom: 30px;
+}
+
+.form-receita input[type="text"],
+.form-receita input[type="date"],
+.form-receita input[type="number"],
+.form-despesa input[type="text"],
+.form-despesa input[type="date"],
+.form-despesa input[type="number"] {
+    background-color: #f7f7f7;
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; 
+    border: none;
+    outline: none;
+}
+
+.form-receita .btn,
+.form-despesa .btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #f7f7f7;
+    background-color: #007ea7;
+    border: none;
+}
+
+@media (max-width: 1000px){
+    .form-receita-despesa {
+        grid-template-columns: 1fr;
+    }
+}

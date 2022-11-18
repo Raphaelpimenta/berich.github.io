@@ -1,0 +1,8 @@
+/* Global */
+@import './global/reset.css';
+@import './global/componentes.css';
+@import './global/header.css';
+
+/* Home */
+@import './home/cartao.css';
+@import './home/form.css';

@@ -1,0 +1,149 @@
+.header-bg {
+    background-color: #2c2c2c;
+    border-bottom: 2px solid #727272;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header .logo,
+.header .login {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo p {
+    font-weight: 600;
+    font-size: 22px;
+    color: #aacc00;
+}
+
+.header .logo p span {
+    color: #80b918; 
+}
+
+.header .login {
+    padding: 8px 12px;
+    border: 1px solid #c7c7c7;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.header .login:hover {
+    background-color: #f7f7f7;
+    border: 1px solid #000000;
+}
+
+.header .login a:hover {
+    color: #000000;
+}
+
+.header .login a {
+    color: #c7c7c7;
+    padding: 10px;
+    transition: .3s;
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    color: #c7c7c7;
+    transition: .3s;
+}
+
+.menu-item li a {
+    font-weight: 600;
+}
+
+.menu-item li a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 800px){
+    .menu-item {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        right: 0px;
+        background-color: #2c2c2c;
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;
+        text-align: center;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    nav.ativa .menu-item {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .menu-item a {
+        padding: 1rem 0;
+        margin: 0px 50px;
+        font-size: 1.5rem;
+        line-height: 2.125;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburguer {
+        display: block;
+        color: #f7f7f7;
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburguer::after, #hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    nav.ativa #hamburguer {
+        border-top-color: transparent;
+    }
+
+    nav.ativa #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    nav.ativa #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    /* .header .login {
+        margin-left: 25rem;
+    } */
+}
