@@ -1,0 +1,31 @@
+.footer-bg {
+    background-color: #2c2c2c;
+    border-top: 2px solid #727272;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer p {
+    font-size: 20px;
+    color: #c7c7c7;
+}
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer .logo p {
+    font-weight: 600;
+    font-size: 22px;
+    color: #aacc00;
+}
+
+.footer .logo p span {
+    color: #80b918; 
+}

@@ -1,46 +1,49 @@
 .form-receita-despesa {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.form {
+    background-color: #000000;
+    padding: 2rem;
+    color: #c7c7c7;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.form h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f7f7f7;
+}
+
+.form .col-1 {
+    margin-bottom: 30px;
+}
+
+.form select {
+    margin-bottom: 30px;
+}
+
+.form-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 60px;
+    gap: 3rem;
 }
 
-.form-receita,
-.form-despesa {
-    background-color: #000000;
-    padding: 1rem;
-    color: #c7c7c7;
-    border-radius: 5px;
-}
-
-.form-receita h1,
-.form-despesa h1 {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.form-receita label,
-.form-despesa label {
+.form-item label {
     display: block;
     margin-bottom: 10px;
 }
 
-.form-receita select,
-.form-despesa select {
+.form-item input {
     margin-bottom: 30px;
 }
 
-.form-receita input,
-.form-despesa input {
-    margin-bottom: 30px;
-}
-
-.form-receita input[type="text"],
-.form-receita input[type="date"],
-.form-receita input[type="number"],
-.form-despesa input[type="text"],
-.form-despesa input[type="date"],
-.form-despesa input[type="number"] {
+.form-item input[type="text"],
+.form-item input[type="date"],
+.form-item input[type="number"] {
     background-color: #f7f7f7;
     padding: 12px;
     border-radius: 4px;
@@ -50,17 +53,22 @@
     outline: none;
 }
 
-.form-receita .btn,
-.form-despesa .btn {
-    padding: 10px 20px;
+.form-item textarea {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form .btn {
+    padding: 15px 30px;
     border-radius: 4px;
+    font-size: 1rem;
     color: #f7f7f7;
     background-color: #007ea7;
     border: none;
 }
 
 @media (max-width: 1000px){
-    .form-receita-despesa {
+    .form-item {
         grid-template-columns: 1fr;
     }
 }

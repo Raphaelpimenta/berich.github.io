@@ -40,7 +40,23 @@
     </header>
 
     <div class="cartao container">
-        <div class="card">
+        <ul>
+            <li class="card">
+                <p class="data">01/24</p>
+                <p class="numero-card">●●●● 2289</p>
+            </li>
+
+            <li class="card">
+                <p class="data">01/24</p>
+                <p class="numero-card">●●●● 2289</p>
+            </li>
+            <li class="card">
+                <p class="data">01/24</p>
+            <p class="numero-card">●●●● 2289</p>
+            </li>
+        </ul>
+
+        <!-- <div class="card">
             <p class="data">01/24</p>
             <p class="numero-card">●●●● 2289</p>
         </div>
@@ -51,12 +67,13 @@
         <div class="card">
             <p class="data">01/24</p>
             <p class="numero-card">●●●● 2289</p>
-        </div>
+        </div> -->
     </div>
 
     <section class="form-receita-despesa container">
-        <form class="form-receita" action="./">
+        <form class="form" action="./">
             <h1>Receita</h1>
+
             <div class="col-1">
                 <label for="tipoReceita">Tipo de Receita</label>
                 <select name="tipo" id="tipo" required>
@@ -64,74 +81,92 @@
                     <option value="20">20</option>
                 </select>
             </div>
-            <div>
-                <label for="valor-receita">Valor da receita</label>
-                <input type="text" id="receita" name="receita" placeholder="Insira o valor da receita">
+
+            <div class="form-item">
+                <div>
+                    <label for="valor-receita">Valor da receita</label>
+                    <input type="text" id="receita" name="receita" placeholder="Insira o valor da receita">
+                </div>
+                <div>
+                    <label for="cpf">CPF</label>
+                    <input type="number" id="cpf" name="cpf" placeholder="Insira seu CPF">
+                </div>
+                <div>
+                    <label for="descricao">Descrição</label>
+                    <input type="text" id="descricao" name="descricao" placeholder="Insira a descrição">
+                </div>
+                <div>
+                    <label for="data">Data</label>
+                    <input type="date" id="data" name="data">
+                </div>
+                <div>
+                    <label for="repeticao">Por quantas vezes essa receita se repetirá?</label>
+                    <textarea id="repeticao" name="repeticao" cols="50" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="mensal-semanal">A repetição será mensal ou semanal?</label>
+                    <textarea id="mensal-semanal" name="mensal-semanal" cols="50" rows="10"></textarea>
+                </div>
             </div>
-            <div class="col-2">
-                <label for="cpf">CPF</label>
-                <input type="number" id="cpf" name="cpf" placeholder="Insira seu CPF">
-            </div>
-            <div>
-                <label for="descricao">Descrição</label>
-                <input type="text" id="descricao" name="descricao" placeholder="Insira a descrição">
-            </div>
-            <div>
-                <label for="data">Data</label>
-                <input type="date" id="data" name="data">
-            </div>
-            <div>
-                <label for="repeticao">Por quantas vezes essa receita se repetirá?</label>
-                <input type="text" id="repeticao" name="repeticao">
-            </div>
-            <div>
-                <label for="mensal-semanal">A repetição será mensal ou semanal?</label>
-                <input type="text" id="mensal-semanal" name="mensal-semanal">
-            </div>
+
 
             <button class="btn" type="submit">Enviar</button>
 
         </form>
 
 
-        <form class="form-despesa" action="./">
+        <form class="form" action="./">
             <h1>Despesa</h1>
-            <div>
+            <div class="col-1">
                 <label for="tipoDespesa">Tipo de Despesa</label>
                 <select name="tipo" id="tipo" required>
                     <option value="10">10</option>
                     <option value="20">20</option>
                 </select>
             </div>
-            <div>
-                <label for="valor-despesa">Valor da despesa</label>
-                <input type="text" id="despesa" name="despesa" placeholder="Insira o valor da despesa">
-            </div>
-            <div>
-                <label for="cpf">CPF</label>
-                <input type="number" id="cpf" name="cpf" placeholder="Insira seu CPF">
-            </div>
-            <div>
-                <label for="descricao">Descrição</label>
-                <input type="text" id="descricao" name="descricao" placeholder="Insira a descrição">
-            </div>
-            <div>
-                <label for="data">Data</label>
-                <input type="date" id="data" name="data">
-            </div>
-            <div>
-                <label for="repeticao">Por quantas vezes essa despesa se repetirá?</label>
-                <input type="text" id="repeticao" name="repeticao">
-            </div>
-            <div>
-                <label for="mensal-semanal">A repetição será mensal ou semanal?</label>
-                <input type="text" id="mensal-semanal" name="mensal-semanal">
+
+            <div class="form-item">
+                <div>
+                    <label for="valor-despesa">Valor da despesa</label>
+                    <input type="text" id="despesa" name="despesa" placeholder="Insira o valor da despesa">
+                </div>
+                <div>
+                    <label for="cpf">CPF</label>
+                    <input type="number" id="cpf" name="cpf" placeholder="Insira seu CPF">
+                </div>
+                <div>
+                    <label for="descricao">Descrição</label>
+                    <input type="text" id="descricao" name="descricao" placeholder="Insira a descrição">
+                </div>
+                <div>
+                    <label for="data">Data</label>
+                    <input type="date" id="data" name="data">
+                </div>
+                <div>
+                    <label for="repeticao">Por quantas vezes essa receita se repetirá?</label>
+                    <textarea id="repeticao" name="repeticao" cols="50" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="mensal-semanal">A repetição será mensal ou semanal?</label>
+                    <textarea id="mensal-semanal" name="mensal-semanal" cols="50" rows="10"></textarea>
+                </div>
             </div>
 
             <button class="btn" type="submit">Enviar</button>
 
         </form>
     </section>
+
+    <footer class="footer-bg">
+        <div class="footer container">
+            <p>Alguns direitos reservados. ©</p>
+
+            <div class="logo">
+                <img src="./img/icones/logo.png" alt="Icone do logo">
+                <p><span>Be</span>Rich</p>
+            </div>
+        </div>
+    </footer>
     
     <script src="./js/script.js"></script>
 </body>
