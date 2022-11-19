@@ -29,3 +29,14 @@
 .footer .logo p span {
     color: #80b918; 
 }
+
+@media (max-width: 600px) {
+    .footer{
+        display: grid;
+        justify-content: center;
+    }
+
+    .footer .logo {
+        margin: 0 auto;
+    }
+}
