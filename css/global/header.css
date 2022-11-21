@@ -16,14 +16,14 @@
     align-items: center;
 }
 
+.header .logo p span {
+    color: #80b918; 
+}
+
 .header .logo p {
     font-weight: 600;
     font-size: 22px;
     color: #aacc00;
-}
-
-.header .logo p span {
-    color: #80b918; 
 }
 
 .header .login {

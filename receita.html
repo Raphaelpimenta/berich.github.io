@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeRich - Receita</title>
+    <link rel="icon" href="./img/icones/logo.png" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header class="header-bg">
+        <div class="header container">
+            <div class="logo">
+                <img src="./img/icones/logo.png" alt="Icone do logo">
+                <p><span>Be</span>Rich</p>
+            </div>
+            <nav>
+                <ul class="menu-item">
+                    <li><a href="./index.html">Conta</a></li>
+                    <li><a href="./receita.html">Receita</a></li>
+                    <li><a href="./despesa.html">Despesa</a></li>
+                    <li><a href="./investimento.html">Investimento</a></li>
+                </ul>
+            </nav>
+            <div class="btn-login">
+                <div class="login">
+                    <img src="./img/icones/usuario.png" alt="Usuario">
+                    <a href="./">Login</a>
+                </div>
+                <button id="btn-mobile">
+                    <span id="hamburguer"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="tabela-bg">
+        <table class="tabela container">
+                <tr class="tabela-titulo">
+                    <th>Tipo</th>
+                    <th>Valor</th>
+                    <th>CPF do cliente</th>
+                    <th>Descrição</th>
+                    <th>Data da Receita</th>
+                    <th>Vezes de Repetições</th>
+                    <th>Mensal / semanal</th>
+                </tr>
+                <c:forEach items="${receita}" var = "r">
+                    <tr>
+                        <td>${r.tipo}</td>
+                        <td>${r.valor_receita}</td>
+                        <td>${r.cpf}</td>
+                        <td>${r.descricao}</td>
+                        <td>${r.data_receita.time
+                        <fmt:formatDate value="${r.data_receita.time }" pattern="dd/MM/yyyy"/>
+                        </td>
+                        <td>${r.qtd_repeticao}</td>
+                        <td>${r.recorrencia}</td>
+                        <td>
+                            <c:url value="receita" var="link">
+                                <c:param name="acao" value="abrir-form-edicao"/>
+                                <c:param name="codigo" value="${r.codigo}"/>
+                            </c:url>
+                            <!-- <a href="${link}">Editar</a> -->
+                            <button class="btn-editar">
+                                <a href="${link}">Editar</a>
+                            </button>
+                        </td>
+                        <td>
+                            <c:url value="receita" var="link">
+                                <c:param name="acao" value="abrir-form-edicao"/>
+                                <c:param name="codigo" value="${r.codigo}"/>
+                            </c:url>
+                            <!-- <a href="${link}">Editar</a> -->
+                            <button class="btn-excluir">
+                                <a href="${link}">Excluir</a>
+                            </button>
+                        </td>
+                    </tr>
+                </c:forEach>   
+                
+        </table>
+    </main>
+
+
+    <footer class="footer-bg">
+        <div class="footer container">
+            <p>Alguns direitos reservados. ©</p>
+
+            <div class="logo">
+                <img src="./img/icones/logo.png" alt="Icone do logo">
+                <p><span>Be</span>Rich</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>

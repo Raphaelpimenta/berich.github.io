@@ -1,0 +1,55 @@
+.tabela-bg {
+    padding: 2rem;
+    margin-top: 130px;
+    margin-bottom: 150px;   
+}
+
+.tabela {
+    width: max-content;
+    border-collapse: collapse;
+    border-radius: 5px;
+    
+}
+
+th {
+    background-color: #3f3f3f;
+    color: #ffffff;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+td {
+    background-color: #dcdcdd;
+}
+
+td:nth-of-type(even){
+    background-color: #ffffff;
+}
+
+td:nth-child(8),
+td:last-child {
+    padding: 5px;
+    background-color: #8FBC8F;
+    border: none;
+    margin: 0px;
+}
+
+.btn-editar,
+.btn-excluir {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.btn-editar {
+    background-color: #004e98;
+}
+
+.btn-excluir {
+    background-color: #d90429;
+}
