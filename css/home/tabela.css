@@ -30,13 +30,13 @@ td:nth-of-type(even){
     background-color: #ffffff;
 }
 
-td:nth-child(8),
+/* td:nth-child(8),
 td:last-child {
     padding: 5px;
     background-color: #8FBC8F;
     border: none;
     margin: 0px;
-}
+} */
 
 .btn-editar,
 .btn-excluir {

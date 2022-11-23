@@ -23,8 +23,8 @@
                 <ul class="menu-item">
                     <li><a href="./index.html">Conta</a></li>
                     <li><a href="./receita.html">Receita</a></li>
-                    <li><a href="./despesa.html">Despesa</a></li>
-                    <li><a href="./investimento.html">Investimento</a></li>
+                    <li><a href="./">Despesa</a></li>
+                    <li><a href="./">Investimento</a></li>
                 </ul>
             </nav>
             <div class="btn-login">
@@ -50,39 +50,87 @@
                     <th>Vezes de Repetições</th>
                     <th>Mensal / semanal</th>
                 </tr>
-                <c:forEach items="${receita}" var = "r">
+                <!-- <c:forEach items="${receita}" var = "r"> -->
                     <tr>
                         <td>${r.tipo}</td>
                         <td>${r.valor_receita}</td>
                         <td>${r.cpf}</td>
                         <td>${r.descricao}</td>
-                        <td>${r.data_receita.time
-                        <fmt:formatDate value="${r.data_receita.time }" pattern="dd/MM/yyyy"/>
-                        </td>
+                        <td>${r.data_receita.time</td>
                         <td>${r.qtd_repeticao}</td>
                         <td>${r.recorrencia}</td>
-                        <td>
-                            <c:url value="receita" var="link">
-                                <c:param name="acao" value="abrir-form-edicao"/>
-                                <c:param name="codigo" value="${r.codigo}"/>
-                            </c:url>
-                            <!-- <a href="${link}">Editar</a> -->
-                            <button class="btn-editar">
-                                <a href="${link}">Editar</a>
-                            </button>
-                        </td>
-                        <td>
-                            <c:url value="receita" var="link">
-                                <c:param name="acao" value="abrir-form-edicao"/>
-                                <c:param name="codigo" value="${r.codigo}"/>
-                            </c:url>
-                            <!-- <a href="${link}">Editar</a> -->
-                            <button class="btn-excluir">
-                                <a href="${link}">Excluir</a>
-                            </button>
-                        </td>
                     </tr>
-                </c:forEach>   
+                <!-- </c:forEach>    -->
+
+                <tr>
+                    <td>${r.tipo}</td>
+                    <td>${r.valor_receita}</td>
+                    <td>${r.cpf}</td>
+                    <td>${r.descricao}</td>
+                    <td>${r.data_receita.time</td>
+                    <td>${r.qtd_repeticao}</td>
+                    <td>${r.recorrencia}</td>
+                </tr>
+
+                <tr>
+                    <td>${r.tipo}</td>
+                    <td>${r.valor_receita}</td>
+                    <td>${r.cpf}</td>
+                    <td>${r.descricao}</td>
+                    <td>${r.data_receita.time</td>
+                    <td>${r.qtd_repeticao}</td>
+                    <td>${r.recorrencia}</td>
+                </tr>
+
+                <tr>
+                    <td>${r.tipo}</td>
+                    <td>${r.valor_receita}</td>
+                    <td>${r.cpf}</td>
+                    <td>${r.descricao}</td>
+                    <td>${r.data_receita.time</td>
+                    <td>${r.qtd_repeticao}</td>
+                    <td>${r.recorrencia}</td>
+                </tr>
+
+                <tr>
+                    <td>${r.tipo}</td>
+                    <td>${r.valor_receita}</td>
+                    <td>${r.cpf}</td>
+                    <td>${r.descricao}</td>
+                    <td>${r.data_receita.time</td>
+                    <td>${r.qtd_repeticao}</td>
+                    <td>${r.recorrencia}</td>
+                </tr>
+
+                <tr>
+                    <td>${r.tipo}</td>
+                    <td>${r.valor_receita}</td>
+                    <td>${r.cpf}</td>
+                    <td>${r.descricao}</td>
+                    <td>${r.data_receita.time</td>
+                    <td>${r.qtd_repeticao}</td>
+                    <td>${r.recorrencia}</td>
+                </tr>
+
+                <tr>
+                    <td>${r.tipo}</td>
+                    <td>${r.valor_receita}</td>
+                    <td>${r.cpf}</td>
+                    <td>${r.descricao}</td>
+                    <td>${r.data_receita.time</td>
+                    <td>${r.qtd_repeticao}</td>
+                    <td>${r.recorrencia}</td>
+                </tr>
+
+                <tr>
+                    <td>${r.tipo}</td>
+                    <td>${r.valor_receita}</td>
+                    <td>${r.cpf}</td>
+                    <td>${r.descricao}</td>
+                    <td>${r.data_receita.time</td>
+                    <td>${r.qtd_repeticao}</td>
+                    <td>${r.recorrencia}</td>
+                </tr>
                 
         </table>
     </main>
